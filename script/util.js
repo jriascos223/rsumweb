@@ -21,7 +21,8 @@ var data = {
 }
 
 function polynomial(x) {
-    return x;
+    var p = "1x^12";
+    return eval(p.split`x`.join`*x`.split`^`.join`**`);
 }
 
 function calculateBarPositions(left, data) {
