@@ -1,12 +1,19 @@
 var ctx = document.getElementById("myChart").getContext("2d");
 var data = {
     labels: [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    datasets: [{
+    datasets: [/* {
         label: "f(x) = x", // Name it as you want
         function: function(x) { return x },
         data: [], // Don't forget to add an empty data array, or else it will break
         borderColor: "rgba(75, 192, 192, 1)",
-        fill: false
+        fill: false,
+    }, */
+    {
+        label: "fucking bar graph", // Name it as you want
+        function: function(x) { return x },
+        data: [], // Don't forget to add an empty data array, or else it will break
+        backgroundColor: [],
+        type: "bar"
     },
     {
         label: "f(x) = x²",
@@ -41,6 +48,7 @@ Chart.pluginService.register({
                     y = fct(x);
                 // Then we add the value to the dataset data
                 data.datasets[i].data.push(y);
+                console.log(data.datasets[i].backgroundColor);
             }
         }
     }
@@ -51,6 +59,10 @@ var myBarChart = new Chart(ctx, {
     data: data,
     options: {
         scales: {
+            xAxes: [{
+                categoryPercentage: 1.0,
+                barPercentage: 1.0
+            }],
             yAxes: [{
                 ticks: {
                     beginAtZero:true
