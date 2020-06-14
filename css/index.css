@@ -293,6 +293,11 @@ table {
     transform:translateY(-50%);
 }
 
+#canvasContainer {
+    width: 250px;
+    height: 250px;
+}
+
 body {
     border:0;
     padding:0;
