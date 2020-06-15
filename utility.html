@@ -3,20 +3,20 @@
     <head>
         <title>Utility | RSUMWEB</title>
         <script type = "text/javascript" src="script/Chart.bundle.js"></script>
-        
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
         <link rel = "stylesheet" type = "text/css" href = "css/index.css">
         <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <body>
-        <div id = "home_background_culture">
+        <div id = "home_background_utility">
             <div id = "image_text">
-                    <h1 class = "miniheading">Culture Corner</h1>
+                    <h1 class = "miniheading">Utility</h1>
                     <br>
-                    <p class = "infotext">Here you can find a brief glimpse into the culture that is associated with the Spanish language.</p>
+                    <p class = "infotext">This is what you are here for! A simple tool for showing Riemann sums of various polynomials!</p>
                     <br>
                     <ul id = "navlist">
                         <li><a href = "index.html">Home</a></li>
-                        <li><a href = "examples.html">Examples</a></li>
+                        <li><a href = "explanation.html">Explanation</a></li>
                         <li><a class = "selected" href = "#">Utility</a></li>
                     </ul>
             </div>
@@ -25,11 +25,22 @@
         <div class = "main_content">
             <div id = "formContainer">
                 <div id = "canvasContainer"><canvas id = "myChart" width = "250" height = "250"></canvas></div>
-                <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider round"></span>
-                  </label>
+                <p>Enter the equation here:</p>
+                <input type="text" id="equation" value = "1x^2" name="equation"><br><br>
+                <button onclick = "graphEquation()" >Graph equation and the Riemann sum:</button>
+                <br><br>
+                <div id = "slider">
+                    <p>Select either left or right Riemann sum:</p>
+                    <br>
+                    <span>Left</span>
+                    <label class="switch">
+                        <input type="checkbox" id = "typeOfSum" checked>
+                        <span class="slider round"></span>
+                      </label>
+                      <span>Right</span>
+                </div>
             </div>
+            <div id = "actualSum"></div>
             
         </div>
     </body>
