@@ -101,6 +101,7 @@ blockquote, q {
 }
 
 body {
+    overflow-x: hidden;
     margin:0;
     /*
     background: linear-gradient(to right, 
@@ -176,7 +177,7 @@ table {
 }
 
 #home_background {
-    background-image:url("../images/home.jpg");
+    background-image:url("../images/home.png");
     text-align:center;
     margin-right:auto;
     margin-left:auto;
@@ -185,7 +186,7 @@ table {
     padding:0px;
     background-color:black;
     background-size:contain;
-    background-position: -12.5%;
+    background-position: -5%;
     height: 40vh;
 }
 
@@ -203,7 +204,7 @@ table {
 }
 
 #home_background_utility {
-    background-image:url("../media/culture.jpg");
+    background-image:url("../images/utility.jpeg");
     text-align:center;
     margin-right:auto;
     margin-left:auto;
@@ -212,7 +213,7 @@ table {
     padding:0px;
     background-color:black;
     background-position:90%;
-    background-size:contain;
+    background-size:cover;
     height: 40vh;
 }
 
